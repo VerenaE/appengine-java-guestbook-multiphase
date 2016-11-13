@@ -30,7 +30,7 @@
     UserService userService = UserServiceFactory.getUserService();
     User user = userService.getCurrentUser();
     if (user != null) {
-        pageContext.setAttribute("user", user);
+        pageContext.setAttribute("Your website is awesome!" "user", user);
 %>
 
 <p>Hello, ${fn:escapeXml(user.nickname)}! (You can
@@ -57,7 +57,7 @@
           .type(Greeting.class) // We want only Greetings
           .ancestor(theBook)    // Anyone in this book
           .order("-date")       // Most recent first - date is indexed.
-          .limit(5)             // Only show 5 of them.
+ //       .limit(5)           // Only show 5 of them.
           .list();
 
     if (greetings.isEmpty()) {
