@@ -30,7 +30,7 @@
     UserService userService = UserServiceFactory.getUserService();
     User user = userService.getCurrentUser();
     if (user != null) {
-        pageContext.setAttribute("Your website is awesome!!" "user", user);
+        pageContext.setAttribute("Your website is awesome!" "user", user);
 %>
 
 <p>Hello, ${fn:escapeXml(user.nickname)}! (You can
