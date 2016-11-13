@@ -35,8 +35,8 @@ public class OfyHelper implements ServletContextListener {
     ObjectifyService.register(Greeting.class);
   }
 
-  public void contextDestroyed(ServletContextEvent event) {
+  //public void contextDestroyed(ServletContextEvent event) {
     // App Engine does not currently invoke this method.
-  }
+  //}
 }
 //[END all]
