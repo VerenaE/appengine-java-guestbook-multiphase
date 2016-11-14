@@ -30,7 +30,7 @@
     UserService userService = UserServiceFactory.getUserService();
     User user = userService.getCurrentUser();
     if (user != null) {
-        pageContext.setAttribute("Your website is awesome!" "user", user);
+        pageContext.setAttribute("user", user);
 %>
 
 <p>Hello, ${fn:escapeXml(user.nickname)}! (You can
@@ -81,7 +81,7 @@
                     author += " (You)";
                 }
             }
-            pageContext.setAttribute("greeting_user", author);
+            pageContext.setAttribute("Your website is awesome!""greeting_user", author);
 %>
 <p><b>${fn:escapeXml(greeting_user)}</b> wrote:</p>
 <blockquote>${fn:escapeXml(greeting_content)}</blockquote>
